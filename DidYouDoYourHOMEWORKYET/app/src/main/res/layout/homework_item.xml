@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ItemLogoView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/name_string"
+        android:id="@+id/ItemNameView"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_below="@+id/ItemLogoView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/due_date"
+        android:id="@+id/ItemDueView"
+        android:layout_alignTop="@+id/ItemNameView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_description_string"
+        android:id="@+id/ItemDescripView"
+        android:layout_below="@+id/ItemNameView"
+        android:layout_alignLeft="@+id/ItemNameView"
+        android:layout_alignStart="@+id/ItemNameView"
+        android:layout_marginTop="41dp"
+        android:layout_alignRight="@+id/ItemDueView"
+        android:layout_alignEnd="@+id/ItemDueView" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ItemSeekBar"
+        android:layout_below="@+id/ItemPercentView"
+        android:layout_alignLeft="@+id/ItemPercentView"
+        android:layout_alignStart="@+id/ItemPercentView"
+        android:layout_alignRight="@+id/ItemDescripView"
+        android:layout_alignEnd="@+id/ItemDescripView"
+        android:max="100"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/percent_done_string"
+        android:id="@+id/ItemPercentView"
+        android:layout_below="@+id/ItemDescripView"
+        android:layout_alignLeft="@+id/ItemDescripView"
+        android:layout_alignStart="@+id/ItemDescripView"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/priority_string"
+        android:id="@+id/ItemUrgencyView"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/ItemSeekBar"
+        android:layout_alignLeft="@+id/ItemSeekBar"
+        android:layout_alignStart="@+id/ItemSeekBar" />
+
+    <RadioGroup
+        android:id="@+id/priorityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/priority"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:text="@string/priority_string" >
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/ItemlowPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/priority_low_string"
+        android:layout_below="@+id/ItemUrgencyView"
+        android:layout_alignLeft="@+id/ItemUrgencyView"
+        android:layout_alignStart="@+id/ItemUrgencyView"
+        android:checked="false" />
+
+    <RadioButton
+        android:id="@+id/ItemmedPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/priority_medium_string"
+        android:layout_below="@+id/ItemUrgencyView"
+        android:layout_alignRight="@+id/ItemPercentView"
+        android:layout_alignEnd="@+id/ItemPercentView" />
+
+    <RadioButton
+        android:id="@+id/ItemhighPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/priority_high_string"
+        android:layout_alignTop="@+id/ItemmedPriority"
+        android:layout_alignLeft="@+id/ItemDueView"
+        android:layout_alignStart="@+id/ItemDueView"
+        android:checked="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UrgencyImageView"
+        android:layout_below="@+id/ItemlowPriority"
+        android:layout_alignLeft="@+id/ItemlowPriority"
+        android:layout_alignStart="@+id/ItemlowPriority"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/do_this_now"
+        android:layout_alignRight="@+id/ItemSeekBar"
+        android:layout_alignEnd="@+id/ItemSeekBar" />
+
+
+</RelativeLayout>
